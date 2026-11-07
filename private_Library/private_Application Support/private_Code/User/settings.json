@@ -1,0 +1,17 @@
+{
+    "http.systemCertificatesNode": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "claudeCode.preferredLocation": "panel",
+    "window.customTitleBarVisibility": "never",
+    "chat.viewSessions.orientation": "stacked",
+    "vscode-postgres.virtualFolders": [
+        "functions"
+    ]
+}

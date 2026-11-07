@@ -1,0 +1,31 @@
+# Brewfile.apps: GUI apps that were installed by hand on the old Mac, plus Mac App Store apps.
+# Kept separate from Brewfile because on a machine where these apps already exist
+# `brew bundle` reports them as failures ("already an App at /Applications/..."); that is harmless.
+# On a fresh Mac everything here installs cleanly. App Store lines need an App Store sign-in first.
+brew "mas"
+cask "cleanshot"
+cask "discord"
+cask "google-chrome"
+cask "libreoffice"
+cask "linear-linear"
+cask "logi-options+"
+cask "microsoft-excel"
+cask "microsoft-onenote"
+cask "microsoft-outlook"
+cask "microsoft-powerpoint"
+cask "microsoft-word"
+cask "nvidia-geforce-now"
+cask "paragon-ntfs"
+cask "protonvpn"
+cask "raycast"
+cask "steam"
+cask "tableau"
+cask "telegram"
+cask "visual-studio-code"
+cask "whatsapp"
+cask "zoom"
+# Mac App Store (needs to be signed in to the App Store first)
+mas "Bitwarden", id: 1352778147
+mas "Dropover", id: 1355679052
+mas "Goodnotes", id: 1444383602
+mas "Save to Raindrop.io", id: 1549370672

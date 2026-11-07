@@ -1,0 +1,12 @@
+.DS_Store
+*.zwc
+.playwright-mcp/
+
+# Personal notes that chezmoi still applies locally but that do not belong in a public repo.
+# They travel with the Ark drive mirror instead of with git.
+dot_claude/CLAUDE.md
+dot_claude/private_projects/
+
+# Empty or machine-local script folders
+scripts/linear_scripts/
+scripts/raindrops_scripts/

@@ -1,0 +1,9 @@
+# repo files that are not dotfiles
+README.md
+AGENT-SETUP.md
+bootstrap.sh
+brew
+scripts
+
+reference
+vscode-extensions.txt

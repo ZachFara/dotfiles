@@ -1,0 +1,48 @@
+#!/usr/bin/env sh
+
+# ============================================================
+#  Apple-menu-bar layout w/ aerospace
+#  Left:   Apple logo, workspaces (aerospace)
+#  Right:  ProtonVPN, Control Center cluster, clock
+# ============================================================
+
+CONFIG_DIR="$HOME/.config/sketchybar"
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+
+source "$CONFIG_DIR/colors.sh"
+source "$CONFIG_DIR/icons.sh"
+
+sketchybar --bar \
+    height=32 \
+    color=$BAR_COLOR \
+    border_width=0 \
+    padding_left=8 \
+    padding_right=8 \
+    blur_radius=30 \
+    position=top \
+    sticky=on \
+    topmost=window \
+    y_offset=0
+
+sketchybar --default \
+    updates=when_shown \
+    icon.font="JetBrainsMono Nerd Font:Medium:15.0" \
+    icon.color=$WHITE \
+    label.font="SF Pro:Semibold:13.0" \
+    label.color=$WHITE \
+    padding_left=5 \
+    padding_right=5 \
+    label.padding_left=4 \
+    label.padding_right=4 \
+    icon.padding_left=4 \
+    icon.padding_right=4
+
+source "$CONFIG_DIR/items/apple.sh"
+source "$CONFIG_DIR/items/aerospace.sh"
+source "$CONFIG_DIR/items/protonvpn.sh"
+source "$CONFIG_DIR/items/control_center.sh"
+source "$CONFIG_DIR/items/clock.sh"
+
+sketchybar --update
+
+echo "sketchybar config loaded"

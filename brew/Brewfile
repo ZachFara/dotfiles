@@ -1,0 +1,97 @@
+tap "antoniorodr/memo"
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
+tap "hashicorp/tap"
+tap "nikitabobko/tap"
+tap "steipete/tap"
+tap "yakitrak/yakitrak"
+# Simple, modern, secure file encryption
+brew "age"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Secure and free password manager for all of your devices
+brew "bitwarden-cli"
+# Get/set bluetooth power and discoverable state
+brew "blueutil"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Sudoless performance monitoring for Apple Silicon processors
+brew "macmon"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Outputs current CPU temperature for OSX
+brew "osx-cpu-temp"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
+# Terminal multiplexer
+brew "tmux"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+# Custom macOS statusbar with shell plugin, interaction and graph support
+brew "felixkratz/formulae/sketchybar", trusted: true
+# Terraform
+brew "hashicorp/tap/terraform", trusted: true
+cask "aerospace"
+# Anthropic's official Claude AI desktop app
+cask "claude"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
+# Brings the power of Copilot coding agent directly to your terminal
+cask "copilot-cli"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-sf-pro"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "gcloud-cli"
+# Open-source keystroke visualiser
+cask "keycastr"
+# GPU-based terminal emulator
+cask "kitty"
+# Mouse control with the keyboard
+cask "mouseless"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# App that enables mouse-free UI interaction
+cask "shortcat"
+# Menu bar toolkit with keep-awake, system monitor and volume mixer
+cask "vorssaint"
+
+vscode "anthropic.claude-code"
+vscode "ckolkman.vscode-postgres"
+vscode "growthjack.claude-code-usage"
+vscode "mechatroner.rainbow-csv"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "mtxr.sqltools"
+vscode "mtxr.sqltools-driver-pg"
+vscode "pomdtr.excalidraw-editor"
+vscode "tomoki1207.pdf"
+vscode "vscodevim.vim"
+npm "@intrect/openswarm"
+npm "@marp-team/marp-cli"
+npm "clawhub"

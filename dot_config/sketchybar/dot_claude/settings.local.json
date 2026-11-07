@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p ~/.config/sketchybar/items)",
+      "Bash(mkdir -p ~/.config/sketchybar/plugins)",
+      "Bash(defaults read *)",
+      "Bash(killall SystemUIServer)",
+      "Bash(screencapture -x -R0,0,1512,30 __TRACKED_VAR__/v3_top2.png)",
+      "Bash(python3 -c \"import PIL; print\\('PIL ok', PIL.__version__\\)\")",
+      "Bash(screencapture -x -R0,0,1512,140 top_strip.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight top_strip.png)",
+      "Read(//Users/user1/**)",
+      "Bash(python3 -)",
+      "Bash(aerospace reload-config *)",
+      "Bash(sketchybar --reload)",
+      "Bash(sh /Users/user1/.config/sketchybar/plugins/aerospace.sh)",
+      "Bash(sketchybar --query workspace)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('icon bytes:', d['icon']['value'].encode\\('utf-8'\\)\\); print\\('icon:', repr\\(d['icon']['value']\\), 'color:', d['icon']['color']\\); print\\('label:', d['label']['value']\\)\")"
+    ]
+  }
+}
