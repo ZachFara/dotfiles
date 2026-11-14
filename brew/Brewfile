@@ -30,6 +30,8 @@ brew "neovim"
 brew "osx-cpu-temp"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
+# Safe, concurrent, practical language
+brew "rust"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # OCR (Optical Character Recognition) engine

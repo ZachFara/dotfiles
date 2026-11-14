@@ -6,5 +6,6 @@
       "Bash(docker run:*)",
       "Bash(docker exec:*)"
     ]
-  }
+  },
+  "skillOverrides": {}
 }

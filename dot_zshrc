@@ -347,3 +347,6 @@ export PATH="/usr/local/opt/node@22/bin:$PATH"
 export PATH="/opt/homebrew/opt/node@24/bin:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# Go 1.26 (keg-only Homebrew formula) and binaries from `go install` (curia)
+export PATH="$HOME/go/bin:/opt/homebrew/opt/go@1.26/bin:$PATH"

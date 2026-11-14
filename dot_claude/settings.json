@@ -1,62 +1,6 @@
 {
-  "model": "fable",
-  "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "\"/Users/user1/Development/active/AgentCommons/.venv/bin/commons\" hook session-start",
-            "timeout": 30
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Bash|Edit|Write|MultiEdit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "\"/Users/user1/Development/active/AgentCommons/.venv/bin/commons\" hook post-tool-use",
-            "timeout": 30
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "\"/Users/user1/Development/active/AgentCommons/.venv/bin/commons\" hook stop",
-            "timeout": 60
-          }
-        ]
-      }
-    ],
-    "PostToolUseFailure": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "\"/Users/user1/Development/active/AgentCommons/.venv/bin/commons\" hook post-tool-use-failure",
-            "timeout": 30
-          }
-        ]
-      }
-    ]
-  },
-  "effortLevel": "high",
-  "modelSettings": {
-    "claude-opus-5-5": {
-      "effortLevel": "high"
-    }
-  },
-  "theme": "dark",
   "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true,
+  "autoCompactEnabled": true,
   "autoMode": {
     "environment": [
       "### Org-wide",
@@ -85,9 +29,175 @@
       "**routine under <user>/ prefix**: none identified"
     ]
   },
-  "voiceEnabled": true,
+  "effortLevel": "high",
+  "enabledPlugins": {
+    "code-review-anthropics@anthropic-plugin-directory": true,
+    "code-simplifier@anthropic-plugin-directory": true,
+    "feature-dev@anthropic-plugin-directory": true,
+    "security-guidance@anthropic-plugin-directory": true,
+    "superpowers@anthropic-plugin-directory": true
+  },
+  "env": {
+    "CLAUDE_CODE_PLUGIN_DIRS": "~/Development/active/cost-lens/plugin"
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/user1/go/bin/curia hook Notification",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "\"/Users/user1/Development/active/AgentCommons/.venv/bin/commons\" hook post-tool-use",
+            "timeout": 30,
+            "type": "command"
+          }
+        ],
+        "matcher": "Bash|Edit|Write|MultiEdit"
+      },
+      {
+        "hooks": [
+          {
+            "command": "/Users/user1/go/bin/curia hook PostToolUse",
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "command": "\"/Users/user1/Development/active/AgentCommons/.venv/bin/commons\" hook post-tool-use-failure",
+            "timeout": 30,
+            "type": "command"
+          }
+        ],
+        "matcher": "Bash"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/user1/go/bin/curia hook PreToolUse",
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/user1/go/bin/curia hook SessionEnd",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "\"/Users/user1/Development/active/AgentCommons/.venv/bin/commons\" hook session-start",
+            "timeout": 30,
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "/Users/user1/go/bin/curia hook SessionStart",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "\"/Users/user1/Development/active/AgentCommons/.venv/bin/commons\" hook stop",
+            "timeout": 60,
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "/Users/user1/go/bin/curia hook Stop",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/user1/go/bin/curia hook SubagentStop",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/user1/go/bin/curia hook UserPromptSubmit",
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  },
+  "model": "fable",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
+  "permissions": {
+    "allow": [
+      "mcp__curia__search_decisions",
+      "mcp__curia__request_decision",
+      "mcp__curia__check_decision",
+      "mcp__curia__withdraw_decision"
+    ]
+  },
+  "pluginConfigs": {
+    "cost-lens": {
+      "options": {
+        "llmFeatures": true
+      }
+    },
+    "cost-lens@inline": {
+      "options": {
+        "llmFeatures": true,
+        "recommendationAlerts": false
+      }
+    }
+  },
+  "skipAutoPermissionPrompt": true,
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark",
+  "tui": "fullscreen",
   "voice": {
     "enabled": true,
     "mode": "hold"
-  }
+  },
+  "voiceEnabled": true
 }

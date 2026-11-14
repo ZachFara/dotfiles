@@ -31,6 +31,12 @@ Checks:
 - `tmux -V`, `kitty --version`, `aerospace --version` all print a version.
 - `code --list-extensions | wc -l` is about 20.
 
+recon (the tmux Claude dashboard on prefix + a) is not on crates.io, so the Brewfile cannot install it. After the bootstrap, run:
+
+    cargo install --git https://github.com/gavraz/recon --rev 707418b --locked
+
+Check: `~/.cargo/bin/recon json` prints a JSON list (empty if no Claude sessions are open).
+
 ## 3. Secrets
 Values are in Bitwarden, folder `env`, items `env:AWS_ACCESS_KEY`, `env:AWS_SECRET`, `env:ANTHROPIC_API_KEY`. Load them into the Keychain:
 
